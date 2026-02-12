@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/QuestionCard.css';
 import AnswerButton from './AnswerButton';
 
 const QuestionCard = ({ question, onAnswerSelect, showWrongAnswer, isValentineQuestion }) => {
+  useEffect(() => {
+    if (!isValentineQuestion) return;
+
+    const handleMouseMove = (e) => {
+      // Dispatch custom event to notify all buttons
+      const event = new CustomEvent('globalMouseMove', { 
+        detail: { x: e.clientX, y: e.clientY } 
+      });
+      window.dispatchEvent(event);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [isValentineQuestion]);
+
   return (
     <div className={`question-card ${isValentineQuestion ? 'valentine-card' : ''}`}>
       <div className="card-content">
