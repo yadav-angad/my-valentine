@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import '../styles/QuizContainer.css';
+import WelcomeCard from './WelcomeCard';
 import QuestionCard from './QuestionCard';
 import FinalScreen from './FinalScreen';
 import ValentineProposal from './ValentineProposal';
 
 const QuizContainer = () => {
+  const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showWrongAnswer, setShowWrongAnswer] = useState(false);
   const [showProposal, setShowProposal] = useState(false);
@@ -18,15 +20,15 @@ const QuizContainer = () => {
     },
     {
       id: 2,
-      question: "What is my favorite drink?",
-      options: ["Water", "Chai", "Coffee"],
-      correctAnswer: "Chai"
+      question: "What is our favorite vacation destination?",
+      options: ["Luxemberg", "Austria", "Switzerland"],
+      correctAnswer: "Switzerland"
     },
     {
       id: 3,
       question: "What was the first gift I gave you?",
-      options: ["Teady bear", "Watch", "Earrings"],
-      correctAnswer: "Teady bear"
+      options: ["Hand Bag", "Watch", "Earrings"],
+      correctAnswer: "Hand Bag"
     },
     {
       id: 4,
@@ -72,6 +74,10 @@ const QuizContainer = () => {
 
   if (currentQuestion === questions.length) {
     return <FinalScreen />;
+  }
+
+  if (!quizStarted) {
+    return <WelcomeCard onStart={() => setQuizStarted(true)} />;
   }
 
   return (

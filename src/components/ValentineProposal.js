@@ -22,12 +22,6 @@ const ValentineProposal = ({ onConfirm }) => {
           <div className="proposal-emojis">
             🌹 💐 💕 💍 ✨ 💑
           </div>
-          <button 
-            className="proposal-button"
-            onClick={handleConfirm}
-          >
-            Continue to Celebration 🎉
-          </button>
         </div>
 
         {showConfetti && (

@@ -58,6 +58,18 @@
   gap: 15px;
 }
 
+.options-container.valentine-options {
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.options-container.valentine-options button {
+  flex: 1;
+  max-width: 150px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

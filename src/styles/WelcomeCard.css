@@ -1,0 +1,116 @@
+.welcome-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.welcome-card {
+  background: linear-gradient(135deg, #fff5f7 0%, #ffe4e9 50%, #ffccdd 100%);
+  border-radius: 30px;
+  padding: 80px 60px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3), 0 0 40px rgba(255, 105, 180, 0.2);
+  animation: welcomeSlideIn 0.7s ease-out;
+  border: 3px solid rgba(255, 105, 180, 0.4);
+  text-align: center;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.welcome-hearts-top {
+  font-size: 50px;
+  animation: heartBeatWelcome 1s ease-in-out infinite;
+}
+
+.welcome-title {
+  font-size: 42px;
+  background: linear-gradient(135deg, #ff6b9d, #d4295f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.welcome-subtitle {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.welcome-hearts-bottom {
+  font-size: 40px;
+  letter-spacing: 10px;
+  animation: emojiWelcomeFloat 2s ease-in-out infinite;
+}
+
+.start-button {
+  padding: 18px 50px;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff6b6b, #ff8c42);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+  margin-top: 20px;
+}
+
+.start-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 45px rgba(255, 107, 107, 0.6);
+}
+
+.start-button:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.welcome-hint {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+  font-style: italic;
+}
+
+@keyframes welcomeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heartBeatWelcome {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes emojiWelcomeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}

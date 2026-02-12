@@ -29,7 +29,7 @@ const QuestionCard = ({ question, onAnswerSelect, showWrongAnswer, isValentineQu
           </div>
         )}
 
-        <div className="options-container">
+        <div className={`options-container ${isValentineQuestion ? 'valentine-options' : ''}`}>
           {question.options.map((option, index) => (
             <AnswerButton
               key={index}
