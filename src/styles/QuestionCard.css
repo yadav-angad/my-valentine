@@ -1,16 +1,17 @@
 .question-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 50%, #f8f9ff 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
   border-radius: 25px;
   padding: 50px;
-  box-shadow: 0 20px 50px rgba(102, 126, 234, 0.25), 0 0 40px rgba(102, 126, 234, 0.15);
+  box-shadow: 0 20px 50px rgba(102, 126, 234, 0.4), 0 0 40px rgba(240, 147, 251, 0.3);
   animation: fadeIn 0.5s ease-out;
-  border: 2px solid rgba(102, 126, 234, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
 }
 
 .question-card.valentine-card {
-  background: linear-gradient(135deg, #fff5f7 0%, #ffb3d9 50%, #ffccdd 100%);
-  border: 3px solid rgba(255, 105, 180, 0.5);
-  box-shadow: 0 20px 50px rgba(255, 105, 180, 0.35), 0 0 40px rgba(255, 105, 180, 0.25);
+  background: linear-gradient(135deg, #ff6b9d 0%, #ff8c42 50%, #ffa500 100%);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 50px rgba(255, 107, 157, 0.4), 0 0 40px rgba(255, 140, 66, 0.3);
 }
 
 .card-content {
@@ -21,26 +22,22 @@
 
 .question-text {
   font-size: 28px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: white;
   text-align: center;
   font-weight: bold;
   line-height: 1.5;
   letter-spacing: 0.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .question-card.valentine-card .question-text {
-  background: linear-gradient(135deg, #ff6b9d, #d4295f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: white;
   font-size: 32px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .wrong-answer-message {
-  background: linear-gradient(135deg, #ffebee, #ffcdd2);
+  background: rgba(255, 255, 255, 0.95);
   color: #c62828;
   padding: 15px 20px;
   border-radius: 15px;
@@ -49,7 +46,7 @@
   font-size: 16px;
   animation: shake 0.5s ease-in-out;
   border-left: 4px solid #c62828;
-  box-shadow: 0 5px 15px rgba(198, 40, 40, 0.1);
+  box-shadow: 0 5px 15px rgba(198, 40, 40, 0.2);
 }
 
 .options-container {
